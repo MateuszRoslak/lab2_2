@@ -23,6 +23,13 @@ class SimilarityFinderTest {
     });
 
     @Test
+    public void emptySequencesTest() {
+        int[] seq1 = {};
+        int[] seq2 = {};
+        assertEquals(1, finder.calculateJackardSimilarity(seq1, seq2));
+    }
+
+    @Test
     public void equalSequencesTest() {
         int[] seq1 = {0,1,2,3};
         int[] seq2 = {0,1,2,3};
